@@ -22,8 +22,15 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='imu_pkg',
-            namespace='imu_pkg',
+            namespace='imu',
             executable='imu_node',
-            name='imu_node'
+            name='imu_node',
+            parameters=[{'com_id': '/dev/ttyUSB2'}]
+        ),
+        Node(
+            package='imu_integrator',
+            namespace='imu',
+			executable='imu_integrator_node',
+			name='imu_integrator_node',
         )
     ])

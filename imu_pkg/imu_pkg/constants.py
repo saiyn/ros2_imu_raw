@@ -1,7 +1,7 @@
-I2C_BUS_ID = 1
-BMI160_ADDR = 0x68
+COM_ID = "/dev/ttyUSB0"
+BAUD_RATE = 115200
 
-IMU_MSG_TOPIC = "data_raw"
+IMU_MSG_TOPIC = "data"
 ODOM_MSG_TOPIC = "odom_zero"
 IMU_MSG_RATE = 25
 ACCEL_RANGE_4G_FLOAT = 4.0
